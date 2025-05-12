@@ -19,6 +19,6 @@ test('peek on stack with two or more elements returns the top element', () => {
 });
 
 test('should have a function called push', () => {
-    expect(typeof stack.push).toBe('number');  
+    expect(typeof stack.push).toBe('function');  
   });
   
