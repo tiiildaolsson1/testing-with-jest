@@ -34,3 +34,11 @@ describe('Clicking "Pusha till stacken"', () => {
         await alert.accept();
     });
 });
+
+test('Push button should have correct type and id', async () => {
+    let pushButton = await driver.findElement(By.id('push'));
+    let typeAttr = await pushButton.getAttribute('type');
+    let idAttr = await pushButton.getAttribute('id');
+    expect(typeAttr).toEqual("submit"); 
+    expect(idAttr).toEqual("push");
+});
